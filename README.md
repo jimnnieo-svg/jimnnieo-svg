@@ -22,12 +22,24 @@
 
 [V3 구현 브랜치](https://github.com/jimnnieo-svg/campus-flow/tree/feat/campus-flow-bento-v3) · [설계 변경 · PR #1](https://github.com/jimnnieo-svg/campus-flow/pull/1) · [실제 테스트 화면과 결과 JSON](https://github.com/jimnnieo-svg/campus-flow/tree/3790cac3335894ceeb2d62b89bfa244117d06977/screenshots)
 
+**실제 구현 화면 · Campus Flow V3**
+
+[![Campus Flow V3 달력 날짜 선택과 과제 필터링 — 모의 Firebase·Chromium 캡처](https://github.com/jimnnieo-svg/campus-flow/blob/3790cac3335894ceeb2d62b89bfa244117d06977/screenshots/taskly-calendar-selection.jpg?raw=true)](https://github.com/jimnnieo-svg/campus-flow/blob/3790cac3335894ceeb2d62b89bfa244117d06977/screenshots/taskly-calendar-selection.jpg)
+
+*날짜 선택 시 해당 날짜의 과제만 표시되는 실제 테스트 화면입니다. 합성 과제와 예시 계정으로 검증했습니다.*
+
 ### 3. CoupleReels · 커플 취향 공유 Android 앱
 
 릴스를 저장할 때 원본을 상대에게 보여줄지 직접 정하도록 서비스와 UI/UX를 기획했습니다. 브랜드 콘셉트와 추천 방식을 정하고, AI 코딩 도구로 프로토타입과 APK를 제작했습니다.
 
 - **P0-3**에서 취향에 따른 교차 추천과 공유 흐름을 구현했습니다. 저장된 JUnit 결과 8개에는 44건, 실패·오류 0건이 기록돼 있습니다. 실제 두 휴대폰의 Firebase 동기화는 이 결과의 검증 범위 밖입니다. [P0-3 검증 결과](https://github.com/jimnnieo-svg/couplereels-android/tree/82ee4e8f24f7696f681bce355e8aff35a274b24f/reports/p0-3)
 - **P0-8**에서는 로컬 두 프로필의 보관함을 분리하고, 직접 공유한 원본만 상대 화면에 전달하도록 했습니다. 캡션 분류는 키워드 규칙 기반이며 유사 콘텐츠 공급자는 미연결 상태입니다. [P0-8 구현 브랜치](https://github.com/jimnnieo-svg/couplereels-android/tree/feature/p0-8-library-20261119) · [공유 정책과 테스트 범위](https://github.com/jimnnieo-svg/couplereels-android/blob/4e465863ff08556467dc090af72d28d9980a1d4f/docs/P0-8-IMPLEMENTATION.txt)
+
+**실제 구현 화면 · CoupleReels P0-8**
+
+<a href="https://github.com/jimnnieo-svg/couplereels-android/blob/df2da0d32784c87da61e61dbb93e827a7431598b/public/screens/library.webp"><img src="https://github.com/jimnnieo-svg/couplereels-android/blob/df2da0d32784c87da61e61dbb93e827a7431598b/public/screens/library.webp?raw=true" alt="P0-8 개인 보관함" width="210"></a> <a href="https://github.com/jimnnieo-svg/couplereels-android/blob/df2da0d32784c87da61e61dbb93e827a7431598b/public/screens/profiles.webp"><img src="https://github.com/jimnnieo-svg/couplereels-android/blob/df2da0d32784c87da61e61dbb93e827a7431598b/public/screens/profiles.webp?raw=true" alt="P0-8 로컬 체험 프로필 및 공유 설정" width="210"></a>
+
+*보관함과 로컬 두 프로필의 공유 설정. 기존 소개 사이트에서 사용한 식별정보 제거 공개용 사본이며, 실제 계정·커플 연결 화면이 아닙니다.*
 
 ### 4. Object Detection · Python 이미지 추론
 
