@@ -14,6 +14,8 @@
 
 팀 기능을 통합하면서 서버 전송 사진이 축소되는 오류를 재현해 수정했습니다. Galaxy S25+에서는 실제 생성과 저장·재열기를 확인했고, 상품의 단추·무늬 재현은 품질 기준에 미달했습니다. 이후 제 계정으로 APK 18633을 발행했습니다. [통합 PR #19](https://github.com/JEC0387/capston-second/pull/19) · [인증 복원 PR #23](https://github.com/JEC0387/capston-second/pull/23) · [실기기 검증](https://github.com/JEC0387/capston-second/blob/b0c72f355629d8bd4e09fbdfb912aed93a3b0429/docs/P54_S25_GENLOOK_E2E_20261106.md#L3) · [18633 릴리스](https://github.com/JEC0387/capston-second/releases/tag/fashionfit-1.1.86.33-p70-20261115)
 
+**발표 영상** · [FashionFit 캡스톤 최종 발표 (YouTube)](https://www.youtube.com/watch?v=6TrEPlsQ6sA)
+
 **[Fashion AI 상세 포트폴리오 · 26개 기능의 코드, 검증 결과와 면접 문답](https://github.com/jimnnieo-svg/jimnnieo-svg/blob/main/docs/fashion-ai.md)**
 
 ### 2. Campus Flow · 과제 마감 관리 웹앱
