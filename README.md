@@ -6,11 +6,15 @@
 
 ## 대표 프로젝트
 
-### 1. Fashion AI · 팀 캡스톤
+### 1. Fashion AI · 체형 분석·3D 아바타·AI 피팅 개발 | 팀 캡스톤
 
-사진 기반 체형 분석, 3D 아바타, AI 가상 피팅의 구현 방향을 설계하고 팀원별 기능 통합과 실기기 검증을 맡았습니다. 피팅 서버로 보낼 이미지가 기기용 크기 제한 때문에 축소되는 문제를 추적했습니다. 두 처리 경로의 크기 기준을 분리하고, 설치된 QA 앱의 이미지 처리 코드에 합성 입력을 넣어 크기 보존을 확인했습니다. 인증 전환 시 사용자 기록을 보존하는 변경도 팀에 통합했습니다.
+- **사진 기반 체형 분석** · 기존 카메라 화면에 전신 촬영 가이드를 추가했습니다. ML Kit 관절점과 MediaPipe 인체 마스크를 이용해 입력 키를 기준으로 어깨·허리·골반의 정면 폭을 추정했습니다. [측정 코드](https://github.com/JEC0387/capston-second/blob/b0c72f355629d8bd4e09fbdfb912aed93a3b0429/fashion_app/app/src/main/java/com/jeiu/fashionproject/ui/viewmodel/BodyMeasurementCalculator.kt#L71-L75) · [초기 구현 · PR #3](https://github.com/JEC0387/capston-second/pull/3)
+- **3D 아바타** · 사용자 치수로 메시를 생성하고, 치수를 편집하면서 아바타를 회전·확대하거나 옷장 의류를 배치할 수 있도록 OpenGL ES 뷰어를 개발했습니다. [메시 생성 코드](https://github.com/JEC0387/capston-second/blob/b0c72f355629d8bd4e09fbdfb912aed93a3b0429/fashion_app/app/src/main/java/com/jeiu/fashionproject/data/PremiumAvatarMesh.kt#L191-L245) · [뷰어 도입 커밋](https://github.com/JEC0387/capston-second/commit/832755b87183e0a14b0c6d2b3845e7e017b32a12)
+- **AI 가상 피팅** · Android에서 사람·의류 입력을 준비하고, FastAPI에서 외부 생성 모델 Genlook을 호출해 진행 상태와 결과를 앱에 돌려주는 흐름을 개발했습니다. 원본과 결과를 비교하고 PNG를 저장·복원할 수 있습니다. [공급자 호출 코드](https://github.com/JEC0387/capston-second/blob/b0c72f355629d8bd4e09fbdfb912aed93a3b0429/backend/genlook_outfit_provider.py#L718-L729) · [연동 커밋](https://github.com/JEC0387/capston-second/commit/b981d273898c68f6df5f3b15b4c00466f9939c79)
 
-[팀 프로젝트](https://github.com/JEC0387/capston-second) · [이미지 처리 오류와 검증 · 병합 PR #19](https://github.com/JEC0387/capston-second/pull/19) · [인증 전환과 데이터 보존 · 병합 PR #23](https://github.com/JEC0387/capston-second/pull/23)
+팀 기능을 통합하면서 서버 전송 사진이 축소되는 오류를 재현해 수정했습니다. Galaxy S25+에서는 실제 생성과 저장·재열기를 확인했고, 상품의 단추·무늬 재현은 품질 기준에 미달했습니다. 이후 제 계정으로 APK 18633을 발행했습니다. [통합 PR #19](https://github.com/JEC0387/capston-second/pull/19) · [인증 복원 PR #23](https://github.com/JEC0387/capston-second/pull/23) · [실기기 검증](https://github.com/JEC0387/capston-second/blob/b0c72f355629d8bd4e09fbdfb912aed93a3b0429/docs/P54_S25_GENLOOK_E2E_20261106.md#L3) · [18633 릴리스](https://github.com/JEC0387/capston-second/releases/tag/fashionfit-1.1.86.33-p70-20261115)
+
+**[Fashion AI 상세 포트폴리오 · 26개 기능의 코드, 검증 결과와 면접 문답](https://github.com/jimnnieo-svg/jimnnieo-svg/blob/main/docs/fashion-ai.md)**
 
 ### 2. Campus Flow · 과제 마감 관리 웹앱
 
